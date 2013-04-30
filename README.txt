@@ -11,3 +11,5 @@ Simple programs for fun and exercise only
 .simple-calculator
 	a simple calculator based on finite automation machine
 	js + html
+.linkUp-js
+	simple linkup program, implemented in js
