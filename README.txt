@@ -13,3 +13,5 @@ Simple programs for fun and exercise only
 	js + html
 .linkUp-js
 	simple linkup program, implemented in js
+.Timer
+	a simple but practical timer implemented in java

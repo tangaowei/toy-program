@@ -1,0 +1,37 @@
+<project name="Timer" default="jars">
+  <property name="src" value="src"/>
+  <property name="bin" value="bin"/>
+  <property name="dist" value="dist"/>
+  <property name="jarFile" value="Timer.jar"/>
+  <property name="mainClass" value="STimer"/>
+
+  <target name="init">
+    <mkdir dir="${bin}"/>
+  </target>
+  
+  <target name="clean">
+    <delete dir="${bin}"/>
+    <delete dir="${dist}"/>
+  </target>
+
+  <target name="compile" depends="clean, init">
+    <javac srcdir="${src}"
+	   destdir="${bin}"/>
+  </target>
+
+  <target name="jars" depends="compile">
+    <mkdir dir="${dist}"/>
+    <jar destfile="${dist}/${jarFile}">
+      <fileset dir="${bin}">
+	<include name="*.class"/>
+      </fileset>
+      <manifest>
+	<attribute name="Main-Class" value="${mainClass}"/>
+      </manifest>
+   </jar>
+  </target>
+
+  <target name="run" depends="jars">
+    <java jar="${dist}/${jarFile}" fork="true"/>
+  </target>
+</project>
