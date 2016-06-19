@@ -15,3 +15,5 @@ Simple programs for fun and exercise only
 	simple linkup program, implemented in js
 .Timer
 	a simple but practical timer implemented in java
+.threadLocal
+    test thread local
