@@ -1,6 +1,11 @@
 import java.util.List;
 import java.util.LinkedList;
 
+/**
+No 46
+Given a collection of distinct numbers, return all possible permutations.
+**/
+
 public class Permutations {
     public List<List<Integer>> permute(int[] nums) {
         return recur(0, nums);
